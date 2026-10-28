@@ -1,0 +1,45 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - name: DB 마이그레이션·RLS 테스트 (PGlite)
+        run: npm run test:db
+      - name: 서비스 흐름 통합 테스트 (PGlite + mock LLM)
+        run: npm run test:integration
+      - run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: "1"
+
+  # 배포 전 점검: 지금 프롬프트·모델로 아첨 점검 3종이 통과했는지 (못 넘으면 배포하지 않는다).
+  # 저장소 Settings → Secrets에 NEXT_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, ANTHROPIC_MODEL을 넣는다.
+  # 배포 작업(Vercel 등)은 이 작업이 통과한 뒤에만 돌게 needs: sycophancy-gate 로 잇는다.
+  sycophancy-gate:
+    if: github.ref == 'refs/heads/main'
+    needs: check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run predeploy:check
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          ANTHROPIC_MODEL: ${{ secrets.ANTHROPIC_MODEL }}

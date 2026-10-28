@@ -1,0 +1,1 @@
+-- 옮김: supabase/dev/auth-stub.sql (이 파일은 지워도 된다)
