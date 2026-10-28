@@ -1,0 +1,1309 @@
+{
+  "figma_file_url": "https://www.figma.com/design/V29LNKH5qnfFmcJ9QrJVGU",
+  "screens": [
+    {
+      "screen_key": "landing",
+      "frames": [
+        {
+          "state": "default",
+          "node_id": "6:2"
+        },
+        {
+          "state": "empty",
+          "node_id": "6:30"
+        }
+      ],
+      "reads": [
+        "project.is_example"
+      ],
+      "inputs": [],
+      "actions": [
+        "example.open"
+      ],
+      "navigates_to": [
+        "projects",
+        "auth",
+        "project_create"
+      ],
+      "notes": "브랜드명 '가설.'은 디자인용 가칭. 예시를 열면 is_example=true 프로젝트의 dashboard로 이동."
+    },
+    {
+      "screen_key": "auth",
+      "frames": [
+        {
+          "state": "default",
+          "node_id": "6:53"
+        },
+        {
+          "state": "empty",
+          "node_id": "6:92"
+        }
+      ],
+      "reads": [
+        "project.is_example",
+        "auth.email",
+        "auth.password",
+        "terms.accepted"
+      ],
+      "inputs": [
+        "auth.email",
+        "auth.password",
+        "terms.accepted"
+      ],
+      "actions": [
+        "auth.sign_in",
+        "auth.sign_up",
+        "terms.accept"
+      ],
+      "navigates_to": [
+        "projects",
+        "auth"
+      ],
+      "notes": "로그인·회원가입 통합 화면. 이메일/비밀번호 검증 및 약관 동의 후 제출. 비밀번호 저장·로그 금지."
+    },
+    {
+      "screen_key": "projects",
+      "frames": [
+        {
+          "state": "default",
+          "node_id": "6:129"
+        },
+        {
+          "state": "empty",
+          "node_id": "6:172"
+        }
+      ],
+      "reads": [
+        "project.is_example",
+        "project.name",
+        "project.idea_text",
+        "project.created_at",
+        "project.status"
+      ],
+      "inputs": [],
+      "actions": [
+        "example.open"
+      ],
+      "navigates_to": [
+        "projects",
+        "dashboard",
+        "project_create",
+        "archive"
+      ],
+      "notes": "새 프로젝트는 project_create, 기존 프로젝트는 dashboard."
+    },
+    {
+      "screen_key": "project_create",
+      "frames": [
+        {
+          "state": "default",
+          "node_id": "6:195"
+        },
+        {
+          "state": "empty",
+          "node_id": "6:236"
+        }
+      ],
+      "reads": [
+        "project.is_example",
+        "project.name",
+        "project.idea_text",
+        "business_model.source_files",
+        "business_model.source_url"
+      ],
+      "inputs": [
+        "project.name",
+        "project.idea_text",
+        "business_model.source_files",
+        "business_model.source_url"
+      ],
+      "actions": [
+        "project.create",
+        "business_model.extract"
+      ],
+      "navigates_to": [
+        "projects",
+        "project_create"
+      ],
+      "notes": "project.create 성공 후 business_model. 자료 추출은 초안이며 사용자가 확인."
+    },
+    {
+      "screen_key": "dashboard",
+      "frames": [
+        {
+          "state": "default",
+          "node_id": "6:271"
+        },
+        {
+          "state": "empty",
+          "node_id": "6:373"
+        }
+      ],
+      "reads": [
+        "project.name",
+        "project.is_example",
+        "hypothesis.statement",
+        "hypothesis.criticality",
+        "hypothesis.evidence_level",
+        "hypothesis.status",
+        "cycle.name",
+        "cycle.period",
+        "proposal.status",
+        "dashboard.next_action",
+        "dashboard.alert"
+      ],
+      "inputs": [],
+      "actions": [],
+      "navigates_to": [
+        "projects",
+        "dashboard",
+        "business_model",
+        "diagnosis",
+        "hypotheses",
+        "proposal",
+        "results",
+        "verdict",
+        "decision",
+        "post_launch",
+        "data_connection",
+        "project_settings",
+        "archive"
+      ],
+      "notes": "중요도와 증거 수준으로 다음 행동을 표시. 점수·별점·게이지 없음."
+    },
+    {
+      "screen_key": "business_model",
+      "frames": [
+        {
+          "state": "default",
+          "node_id": "6:478"
+        },
+        {
+          "state": "empty",
+          "node_id": "6:600"
+        }
+      ],
+      "reads": [
+        "project.name",
+        "project.is_example",
+        "business_model.problem",
+        "business_model.customer_segments",
+        "business_model.unique_value_proposition",
+        "business_model.solution",
+        "business_model.channels",
+        "business_model.revenue_streams",
+        "business_model.cost_structure",
+        "business_model.key_metrics",
+        "business_model.unfair_advantage",
+        "business_model.version",
+        "business_model.source_files",
+        "business_model.comparison_note"
+      ],
+      "inputs": [
+        "business_model.problem",
+        "business_model.customer_segments",
+        "business_model.unique_value_proposition",
+        "business_model.solution",
+        "business_model.channels",
+        "business_model.revenue_streams",
+        "business_model.cost_structure",
+        "business_model.key_metrics",
+        "business_model.unfair_advantage"
+      ],
+      "actions": [
+        "business_model.save_version",
+        "business_model.compare",
+        "business_model.extract"
+      ],
+      "navigates_to": [
+        "projects",
+        "dashboard",
+        "business_model",
+        "diagnosis",
+        "hypotheses",
+        "proposal",
+        "results",
+        "verdict",
+        "decision",
+        "post_launch",
+        "data_connection",
+        "project_settings",
+        "archive",
+        "project_create"
+      ],
+      "notes": "버전 저장 및 변형 비교. 비교 UI는 버전별 데이터로 확장. 원본 자료와 추출 초안 구분."
+    },
+    {
+      "screen_key": "diagnosis",
+      "frames": [
+        {
+          "state": "default",
+          "node_id": "6:660"
+        },
+        {
+          "state": "empty",
+          "node_id": "6:890"
+        },
+        {
+          "state": "loading",
+          "node_id": "6:946"
+        }
+      ],
+      "reads": [
+        "project.name",
+        "project.is_example",
+        "task.name",
+        "task.role",
+        "diagnosis.zone",
+        "diagnosis.is_provisional",
+        "diagnosis.demand_level",
+        "diagnosis.demand_prior",
+        "diagnosis.feasibility_level",
+        "diagnosis.agency_assumed",
+        "diagnosis.agency_observed",
+        "diagnosis.wrapper_risk",
+        "diagnosis.wrapper_items.item_key",
+        "diagnosis.wrapper_items.status",
+        "diagnosis.wrapper_items.evidence_note",
+        "diagnosis.baseline_win_rate",
+        "cost_model.inputs.tasks_per_user",
+        "cost_model.inputs.calls_per_task",
+        "cost_model.inputs.input_tokens",
+        "cost_model.inputs.output_tokens",
+        "cost_model.inputs.unit_price",
+        "cost_model.inputs.cache_saving",
+        "cost_model.inputs.retry_rate",
+        "cost_model.inputs.review_hours",
+        "cost_model.inputs.hourly_wage",
+        "cost_model.inputs.price",
+        "cost_model.price_table_updated_at",
+        "cost_model.scenarios.scenario",
+        "cost_model.scenarios.margin",
+        "cost_model.sensitivity.case",
+        "cost_model.sensitivity.breakeven_price",
+        "cost_model.target_revenue",
+        "cost_model.required_customers",
+        "cost_model.scenarios.heavy_user_margin",
+        "diagnosis.business_assumptions",
+        "diagnosis.ai_value_assumptions"
+      ],
+      "inputs": [
+        "task.name",
+        "task.role",
+        "diagnosis.agency_assumed",
+        "cost_model.inputs.tasks_per_user",
+        "cost_model.inputs.calls_per_task",
+        "cost_model.inputs.input_tokens",
+        "cost_model.inputs.output_tokens",
+        "cost_model.inputs.unit_price",
+        "cost_model.inputs.cache_saving",
+        "cost_model.inputs.retry_rate",
+        "cost_model.inputs.review_hours",
+        "cost_model.inputs.hourly_wage",
+        "cost_model.inputs.price",
+        "cost_model.target_revenue"
+      ],
+      "actions": [
+        "diagnosis.update_task",
+        "baseline_test.start",
+        "cost_model.recalculate",
+        "diagnosis.run"
+      ],
+      "navigates_to": [
+        "projects",
+        "dashboard",
+        "business_model",
+        "diagnosis",
+        "hypotheses",
+        "proposal",
+        "results",
+        "verdict",
+        "decision",
+        "post_launch",
+        "data_connection",
+        "project_settings",
+        "archive"
+      ],
+      "notes": "L2 미만은 잠정. 미확인 축은 구역 확정 금지. 사전값은 참고. 비용 표는 가상 단가를 코드로 계산한 예시. 월 목표는 매출 기준. 실무자·구매자별 별도 진단. H2~H4 라벨은 보조 표기로 실제 설문 문구 별도 확인."
+    },
+    {
+      "screen_key": "hypotheses",
+      "frames": [
+        {
+          "state": "default",
+          "node_id": "6:1002"
+        },
+        {
+          "state": "empty",
+          "node_id": "6:1117"
+        }
+      ],
+      "reads": [
+        "project.name",
+        "project.is_example",
+        "hypothesis.rank",
+        "hypothesis.statement",
+        "hypothesis.type",
+        "hypothesis.criticality",
+        "hypothesis.evidence_level",
+        "hypothesis.status",
+        "criticality_rating.rater_name",
+        "criticality_rating.rater_type",
+        "criticality_rating.level",
+        "criticality_rating.note",
+        "criticality_rating.needs_review",
+        "outside_view.sample_companies"
+      ],
+      "inputs": [
+        "hypothesis.statement",
+        "hypothesis.type",
+        "criticality_rating.level",
+        "criticality_rating.note"
+      ],
+      "actions": [
+        "hypothesis.create",
+        "hypothesis.rate_criticality",
+        "hypothesis.reorder"
+      ],
+      "navigates_to": [
+        "projects",
+        "dashboard",
+        "business_model",
+        "diagnosis",
+        "hypotheses",
+        "proposal",
+        "results",
+        "verdict",
+        "decision",
+        "post_launch",
+        "data_connection",
+        "project_settings",
+        "archive"
+      ],
+      "notes": "치명→중대→경미, 같은 중요도에서 L0→L4. outside_view.sample_companies<10일 때 fail_rate를 서버·화면 모두 반환/표시하지 않음. enum 태그는 input: 부모 안에서 선택값으로 연결."
+    },
+    {
+      "screen_key": "proposal",
+      "frames": [
+        {
+          "state": "default",
+          "node_id": "6:1173"
+        },
+        {
+          "state": "empty",
+          "node_id": "6:1337"
+        },
+        {
+          "state": "locked",
+          "node_id": "6:1397"
+        }
+      ],
+      "reads": [
+        "project.name",
+        "project.is_example",
+        "proposal.status",
+        "hypothesis.statement",
+        "hypothesis.evidence_level",
+        "proposal.method",
+        "proposal.guide_steps",
+        "proposal.mvp_scope",
+        "proposal.interview_questions",
+        "proposal.pitch_draft",
+        "proposal.demo_outline",
+        "proposal.expected_weeks",
+        "proposal.target_value",
+        "proposal.min_value",
+        "proposal.sample_size",
+        "proposal.locked_at",
+        "proposal.decision_table.n",
+        "proposal.decision_table.met_from",
+        "proposal.decision_table.hold_range",
+        "proposal.decision_table.fail_to",
+        "proposal.conclusion_probability",
+        "proposal.rejudge_count",
+        "proposal.pdf_url"
+      ],
+      "inputs": [
+        "proposal.method",
+        "proposal.guide_steps",
+        "proposal.mvp_scope",
+        "proposal.interview_questions",
+        "proposal.pitch_draft",
+        "proposal.demo_outline",
+        "proposal.target_value",
+        "proposal.min_value",
+        "proposal.sample_size"
+      ],
+      "actions": [
+        "proposal.generate",
+        "proposal.lock_thresholds",
+        "proposal.export_pdf"
+      ],
+      "navigates_to": [
+        "projects",
+        "dashboard",
+        "business_model",
+        "diagnosis",
+        "hypotheses",
+        "proposal",
+        "results",
+        "verdict",
+        "decision",
+        "post_launch",
+        "data_connection",
+        "project_settings",
+        "archive"
+      ],
+      "notes": "잠금 시 target_value/min_value/sample_size 입력 비활성. 실제 통계 계산 전 결정표·결론확률을 대기 상태로 표시하며 PDF 내보내기 비활성. 계산 완료 후 export_pdf 활성화. 기획서 실행은 고객 팀 담당."
+    },
+    {
+      "screen_key": "results",
+      "frames": [
+        {
+          "state": "default",
+          "node_id": "6:1561"
+        },
+        {
+          "state": "empty",
+          "node_id": "6:1716"
+        }
+      ],
+      "reads": [
+        "project.name",
+        "project.is_example",
+        "evidence.proposal_id",
+        "evidence.method_same",
+        "evidence.method_diff_reason",
+        "evidence.recruitment",
+        "evidence.attempts",
+        "evidence.responses",
+        "evidence.successes",
+        "evidence.raw_files",
+        "evidence.has_raw",
+        "evidence.acquaintance_ratio",
+        "evidence.same_company_count",
+        "evidence.notice_given",
+        "evidence.memo",
+        "evidence.evidence_level",
+        "evidence.effective_n",
+        "evidence.interview_insights",
+        "evidence.switching_motives",
+        "evidence.interview_quality",
+        "evidence.transcript_level"
+      ],
+      "inputs": [
+        "evidence.method_same",
+        "evidence.method_diff_reason",
+        "evidence.recruitment",
+        "evidence.attempts",
+        "evidence.responses",
+        "evidence.successes",
+        "evidence.raw_files",
+        "evidence.has_raw",
+        "evidence.acquaintance_ratio",
+        "evidence.same_company_count",
+        "evidence.notice_given",
+        "evidence.memo"
+      ],
+      "actions": [
+        "evidence.upload_raw",
+        "evidence.submit"
+      ],
+      "navigates_to": [
+        "projects",
+        "dashboard",
+        "business_model",
+        "diagnosis",
+        "hypotheses",
+        "proposal",
+        "results",
+        "verdict",
+        "decision",
+        "post_launch",
+        "data_connection",
+        "project_settings",
+        "archive"
+      ],
+      "notes": "제안과 다른 방법이면 이유 필수. successes≤responses≤attempts. 편향·군집 보정은 서버에서 계산. 원자료 업로드·증거 배지 포함. 전사본은 L1 참고용이며 해석형 분석은 사람 검토 필요."
+    },
+    {
+      "screen_key": "verdict",
+      "frames": [
+        {
+          "state": "default",
+          "node_id": "6:1782"
+        },
+        {
+          "state": "empty",
+          "node_id": "6:1882"
+        },
+        {
+          "state": "met",
+          "node_id": "6:1938"
+        },
+        {
+          "state": "not_met",
+          "node_id": "6:2038"
+        },
+        {
+          "state": "on_hold",
+          "node_id": "6:2138"
+        },
+        {
+          "state": "no_conclusion",
+          "node_id": "6:2238"
+        }
+      ],
+      "reads": [
+        "project.name",
+        "project.is_example",
+        "verdict.result",
+        "evidence.evidence_level",
+        "hypothesis.statement",
+        "verdict.n",
+        "verdict.effective_n",
+        "verdict.p_above_target",
+        "verdict.p_below_min",
+        "verdict.wilson_low",
+        "verdict.wilson_high",
+        "verdict.rejudge_count"
+      ],
+      "inputs": [],
+      "actions": [
+        "verdict.rejudge"
+      ],
+      "navigates_to": [
+        "projects",
+        "dashboard",
+        "business_model",
+        "diagnosis",
+        "hypotheses",
+        "proposal",
+        "results",
+        "verdict",
+        "post_launch",
+        "data_connection",
+        "project_settings",
+        "archive",
+        "decision"
+      ],
+      "notes": "상태별 프레임은 독립된 가상 UI 상태이며 수치 결과를 주장하지 않음. 충족/미달은 decision, 판정 보류·결론 없음은 proposal. 확률·신뢰구간·유효 표본은 통계 모듈이 계산."
+    },
+    {
+      "screen_key": "decision",
+      "frames": [
+        {
+          "state": "default",
+          "node_id": "6:2338"
+        },
+        {
+          "state": "empty",
+          "node_id": "6:2435"
+        }
+      ],
+      "reads": [
+        "project.name",
+        "project.is_example",
+        "decision.recommendation",
+        "decision.rationale",
+        "evidence.evidence_level",
+        "verdict.result",
+        "decision.choice",
+        "decision.reason_type",
+        "decision.decided_by",
+        "decision.decided_at"
+      ],
+      "inputs": [
+        "decision.choice",
+        "decision.reason_type",
+        "decision.decided_by"
+      ],
+      "actions": [
+        "decision.record"
+      ],
+      "navigates_to": [
+        "projects",
+        "dashboard",
+        "business_model",
+        "diagnosis",
+        "hypotheses",
+        "proposal",
+        "results",
+        "verdict",
+        "decision",
+        "post_launch",
+        "data_connection",
+        "project_settings",
+        "archive"
+      ],
+      "notes": "권고와 팀의 결정 분리. decision.record 성공 후 choice에 따라 이동: continue→post_launch; more_validation→proposal; revise→hypotheses 또는 business_model; stop→archive. 아래 이동 버튼은 탐색용이며 결정 저장을 대체하지 않음. 실제 가설 상태 변경은 decision.record에서만."
+    },
+    {
+      "screen_key": "post_launch",
+      "frames": [
+        {
+          "state": "default",
+          "node_id": "6:2489"
+        },
+        {
+          "state": "empty",
+          "node_id": "6:2600"
+        }
+      ],
+      "reads": [
+        "project.name",
+        "project.is_example",
+        "metric_card.event_name",
+        "metric_card.definition",
+        "metric_card.target_value",
+        "metric_card.min_value",
+        "metric_card.alert_rule",
+        "metric_card.actual_value",
+        "metric_card.evidence_level",
+        "metric_card.recheck_result",
+        "metric_card.measurement_summary",
+        "metric_card.ai_summary"
+      ],
+      "inputs": [
+        "metric_card.event_name",
+        "metric_card.definition",
+        "metric_card.target_value",
+        "metric_card.min_value",
+        "metric_card.alert_rule"
+      ],
+      "actions": [
+        "metric_card.create",
+        "metric_card.export_yaml",
+        "metric_card.export_csv"
+      ],
+      "navigates_to": [
+        "projects",
+        "dashboard",
+        "business_model",
+        "diagnosis",
+        "hypotheses",
+        "proposal",
+        "results",
+        "verdict",
+        "decision",
+        "post_launch",
+        "data_connection",
+        "project_settings",
+        "archive"
+      ],
+      "notes": "충족 가설에 지표 카드 생성. 정의가 바뀌면 기준 재설정·잠금 필요. 수령 데이터→results→verdict→decision. 가설 상태 직접 변경 금지. 분석/모니터링 도구를 직접 구현하지 않음."
+    },
+    {
+      "screen_key": "data_connection",
+      "frames": [
+        {
+          "state": "default",
+          "node_id": "6:2660"
+        },
+        {
+          "state": "empty",
+          "node_id": "6:2743"
+        },
+        {
+          "state": "error",
+          "node_id": "6:2797"
+        }
+      ],
+      "reads": [
+        "project.name",
+        "project.is_example",
+        "data_connection.tool_name",
+        "data_connection.kind",
+        "data_connection.status",
+        "data_connection.last_sync_at"
+      ],
+      "inputs": [],
+      "actions": [
+        "data_connection.remove",
+        "data_connection.add"
+      ],
+      "navigates_to": [
+        "projects",
+        "dashboard",
+        "business_model",
+        "diagnosis",
+        "hypotheses",
+        "proposal",
+        "results",
+        "verdict",
+        "decision",
+        "post_launch",
+        "data_connection",
+        "project_settings",
+        "archive"
+      ],
+      "notes": "연결 상태별 읽기. 인증 정보는 별도 보안 입력 흐름에서 처리하고 비밀값은 파일에 포함하지 않음. 오류에서 다시 연결 제공."
+    },
+    {
+      "screen_key": "project_settings",
+      "frames": [
+        {
+          "state": "default",
+          "node_id": "6:2880"
+        },
+        {
+          "state": "empty",
+          "node_id": "6:2969"
+        }
+      ],
+      "reads": [
+        "project.name",
+        "project.is_example",
+        "project.retention_days",
+        "project.delete_raw_after_analysis",
+        "member.name",
+        "member.email",
+        "member.role"
+      ],
+      "inputs": [
+        "project.name",
+        "project.retention_days",
+        "project.delete_raw_after_analysis",
+        "member.email",
+        "member.role"
+      ],
+      "actions": [
+        "member.invite",
+        "member.remove",
+        "project.save_settings",
+        "project.archive"
+      ],
+      "navigates_to": [
+        "projects",
+        "dashboard",
+        "business_model",
+        "diagnosis",
+        "hypotheses",
+        "proposal",
+        "results",
+        "verdict",
+        "decision",
+        "post_launch",
+        "data_connection",
+        "project_settings",
+        "archive"
+      ],
+      "notes": "추가 action project.save_settings 사용: 프로젝트 이름·보관 기간·분석 후 원본 삭제 설정 저장. 소유자만 권한·삭제 설정 변경. 실제 연락처 대신 example.test 사용."
+    },
+    {
+      "screen_key": "archive",
+      "frames": [
+        {
+          "state": "default",
+          "node_id": "6:3025"
+        },
+        {
+          "state": "empty",
+          "node_id": "6:3101"
+        }
+      ],
+      "reads": [
+        "project.name",
+        "project.is_example",
+        "project.status",
+        "decision.rationale",
+        "evidence.evidence_level",
+        "verdict.result",
+        "decision.decided_at"
+      ],
+      "inputs": [],
+      "actions": [
+        "project.restore"
+      ],
+      "navigates_to": [
+        "projects",
+        "dashboard",
+        "business_model",
+        "diagnosis",
+        "hypotheses",
+        "proposal",
+        "results",
+        "verdict",
+        "decision",
+        "post_launch",
+        "data_connection",
+        "project_settings",
+        "archive"
+      ],
+      "notes": "project.restore 후 dashboard. 프로젝트와 증거·결정 이력 보존."
+    }
+  ],
+  "components": [
+    {
+      "name": "EvidenceBadge",
+      "node_id": "3:15",
+      "variant_prop": "level",
+      "values": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ]
+    },
+    {
+      "name": "VerdictBadge",
+      "node_id": "3:37",
+      "variant_prop": "result",
+      "values": [
+        "met",
+        "not_met",
+        "on_hold",
+        "no_conclusion"
+      ]
+    },
+    {
+      "name": "HypothesisStatus",
+      "node_id": "3:61",
+      "variant_prop": "status",
+      "values": [
+        "unverified",
+        "in_progress",
+        "met",
+        "not_met",
+        "on_hold",
+        "needs_recheck"
+      ]
+    },
+    {
+      "name": "CriticalityTag",
+      "node_id": "3:83",
+      "variant_prop": "level",
+      "values": [
+        "critical",
+        "major",
+        "minor"
+      ]
+    },
+    {
+      "name": "ZoneChip",
+      "node_id": "3:101",
+      "variant_prop": "zone",
+      "values": [
+        "green",
+        "red",
+        "rnd",
+        "low"
+      ]
+    },
+    {
+      "name": "WrapperItemStatus",
+      "node_id": "3:119",
+      "variant_prop": "status",
+      "values": [
+        "yes",
+        "no",
+        "unknown"
+      ]
+    },
+    {
+      "name": "RiskLevel",
+      "node_id": "3:135",
+      "variant_prop": "level",
+      "values": [
+        "high",
+        "mid",
+        "low"
+      ]
+    },
+    {
+      "name": "AgencyChoice",
+      "node_id": "3:155",
+      "variant_prop": "level",
+      "values": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5"
+      ]
+    },
+    {
+      "name": "ProposalStatus",
+      "node_id": "3:177",
+      "variant_prop": "status",
+      "values": [
+        "draft",
+        "sent",
+        "awaiting",
+        "received"
+      ]
+    },
+    {
+      "name": "ConnectionStatus",
+      "node_id": "3:195",
+      "variant_prop": "status",
+      "values": [
+        "connected",
+        "error",
+        "disconnected"
+      ]
+    },
+    {
+      "name": "DecisionChoice",
+      "node_id": "3:213",
+      "variant_prop": "choice",
+      "values": [
+        "continue",
+        "revise",
+        "stop",
+        "more_validation"
+      ]
+    },
+    {
+      "name": "Button",
+      "node_id": "3:233",
+      "variant_prop": "kind",
+      "values": [
+        "primary",
+        "secondary",
+        "ghost",
+        "disabled"
+      ]
+    },
+    {
+      "name": "Input",
+      "node_id": "3:251",
+      "variant_prop": "state",
+      "values": [
+        "default",
+        "disabled",
+        "error"
+      ]
+    },
+    {
+      "name": "ProvisionalLabel",
+      "node_id": "3:261",
+      "variant_prop": null,
+      "values": []
+    },
+    {
+      "name": "ExampleBanner",
+      "node_id": "3:263",
+      "variant_prop": null,
+      "values": []
+    },
+    {
+      "name": "ProjectStatus",
+      "node_id": "5:57",
+      "variant_prop": "status",
+      "values": [
+        "active",
+        "archived"
+      ]
+    },
+    {
+      "name": "TaskRole",
+      "node_id": "5:63",
+      "variant_prop": "role",
+      "values": [
+        "practitioner",
+        "buyer"
+      ]
+    },
+    {
+      "name": "HypothesisType",
+      "node_id": "5:79",
+      "variant_prop": "type",
+      "values": [
+        "trust",
+        "accuracy",
+        "data",
+        "demand",
+        "preference",
+        "feasibility",
+        "payment"
+      ]
+    },
+    {
+      "name": "Scenario",
+      "node_id": "5:87",
+      "variant_prop": "scenario",
+      "values": [
+        "uniform",
+        "observed",
+        "extreme"
+      ]
+    },
+    {
+      "name": "RaterType",
+      "node_id": "5:95",
+      "variant_prop": "rater_type",
+      "values": [
+        "team",
+        "external",
+        "llm"
+      ]
+    },
+    {
+      "name": "ReasonType",
+      "node_id": "5:103",
+      "variant_prop": "reason_type",
+      "values": [
+        "evidence",
+        "external",
+        "other"
+      ]
+    },
+    {
+      "name": "ConnectionKind",
+      "node_id": "5:109",
+      "variant_prop": "kind",
+      "values": [
+        "analytics",
+        "llm_monitoring"
+      ]
+    },
+    {
+      "name": "MemberRole",
+      "node_id": "5:117",
+      "variant_prop": "role",
+      "values": [
+        "owner",
+        "member",
+        "external_rater"
+      ]
+    }
+  ],
+  "new_fields": [
+    {
+      "key": "auth.email",
+      "type": "string",
+      "reason": "로그인·회원가입 이메일 입력. 인증 전용."
+    },
+    {
+      "key": "auth.password",
+      "type": "string",
+      "reason": "비밀번호 입력. 메모리 내 전용, 저장·로그 금지."
+    },
+    {
+      "key": "terms.accepted",
+      "type": "boolean",
+      "reason": "약관 동의 상태."
+    },
+    {
+      "key": "business_model.source_url",
+      "type": "string",
+      "reason": "웹사이트에서 사업 모델을 추출할 주소."
+    },
+    {
+      "key": "cycle.name",
+      "type": "string",
+      "reason": "검증 사이클 이름."
+    },
+    {
+      "key": "cycle.period",
+      "type": "string",
+      "reason": "검증 사이클 기간 표시."
+    },
+    {
+      "key": "dashboard.next_action",
+      "type": "string",
+      "reason": "프로젝트의 다음 행동 안내."
+    },
+    {
+      "key": "dashboard.alert",
+      "type": "string",
+      "reason": "증거-계획 불일치 안내."
+    },
+    {
+      "key": "business_model.comparison_note",
+      "type": "string",
+      "reason": "변형 아이디어 간 차이 요약."
+    },
+    {
+      "key": "cost_model.target_revenue",
+      "type": "number",
+      "reason": "월 매출 목표. 수익과 매출을 분리해 해석."
+    },
+    {
+      "key": "cost_model.required_customers",
+      "type": "number",
+      "reason": "월 매출 목표에 필요한 유료 고객 수."
+    },
+    {
+      "key": "cost_model.scenarios.heavy_user_margin",
+      "type": "number",
+      "reason": "상위 10% 고객의 1인당 공헌이익률. 평균 마진과 구분."
+    },
+    {
+      "key": "diagnosis.business_assumptions",
+      "type": "string[]",
+      "reason": "다차원 사업 진단을 점수가 아닌 가정 목록으로 출력."
+    },
+    {
+      "key": "diagnosis.ai_value_assumptions",
+      "type": "string[]",
+      "reason": "데이터·정확도·오류 비용 검토 가정."
+    },
+    {
+      "key": "proposal.interview_questions",
+      "type": "string[]",
+      "reason": "인터뷰 질문지 초안."
+    },
+    {
+      "key": "proposal.pitch_draft",
+      "type": "string",
+      "reason": "판매 테스트용 피치 초안."
+    },
+    {
+      "key": "proposal.demo_outline",
+      "type": "string[]",
+      "reason": "고객 팀이 제작할 데모의 범위."
+    },
+    {
+      "key": "evidence.interview_insights",
+      "type": "string[]",
+      "reason": "전사본에서 추출한 인사이트 후보."
+    },
+    {
+      "key": "evidence.switching_motives",
+      "type": "string[]",
+      "reason": "사람이 확정할 전환 동기 후보."
+    },
+    {
+      "key": "evidence.interview_quality",
+      "type": "string",
+      "reason": "인터뷰 질문 유형과 품질 안내."
+    },
+    {
+      "key": "evidence.transcript_level",
+      "type": "enum(L1)",
+      "reason": "전사본 진술 증거는 참고용임을 표시."
+    },
+    {
+      "key": "metric_card.evidence_level",
+      "type": "enum(L0|L1|L2|L3|L4)",
+      "reason": "출시 후 수령한 증거의 수준."
+    },
+    {
+      "key": "metric_card.measurement_summary",
+      "type": "string",
+      "reason": "외부 고객 행동·A/B 테스트·설문 수령 요약."
+    },
+    {
+      "key": "metric_card.ai_summary",
+      "type": "string",
+      "reason": "외부 AI 실행·품질·비용 요약."
+    },
+    {
+      "key": "project.retention_days",
+      "type": "integer",
+      "reason": "원자료 보관 기간 설정."
+    },
+    {
+      "key": "project.delete_raw_after_analysis",
+      "type": "boolean",
+      "reason": "분석 후 원본 삭제 설정."
+    }
+  ],
+  "open_questions": [
+    "첨부 지시에서 2장 화면 목록이 누락되어 16개 screen_key를 기획으로 보완했습니다. 백엔드 라우트와 통합할 때 이 키를 기준으로 확정해야 합니다.",
+    "결과 제출 폼을 비로그인 팀원도 열 수 있어야 하는가?",
+    "가설별 결과 판정 엔드포인트와 데이터 연결 제공 도구의 API 계약은 개발 단계에서 확정해야 합니다."
+  ],
+  "naming_conventions": {
+    "screen": "screen/<screen_key>/<state>",
+    "bind": "bind:<entity.field>",
+    "input": "input:<entity.field>",
+    "action": "action:<action_key>",
+    "navigation": "nav:<screen_key>",
+    "layout": "layout:<description> (장식/구조)",
+    "decorative": "label, decoration:* (서버 바인딩 아님)",
+    "array_fields": "배열 인덱스를 레이어 키에 고정하지 않음. 반복 행의 entity/row ID로 문맥을 연결."
+  },
+  "design": {
+    "language": "ko",
+    "frame_width": 1440,
+    "font": "Noto Sans KR",
+    "pages": {
+      "00_Handoff": "0:1",
+      "01_Components": "2:2",
+      "02_Screens": "2:3"
+    },
+    "color_variables": {
+      "bg": "VariableID:2:7",
+      "surface": "VariableID:2:9",
+      "raised": "VariableID:2:11",
+      "ink": "VariableID:2:13",
+      "muted": "VariableID:2:15",
+      "line": "VariableID:2:17",
+      "mint": "VariableID:2:19",
+      "warm": "VariableID:2:21",
+      "red": "VariableID:2:23",
+      "amber": "VariableID:2:25",
+      "mintDim": "VariableID:2:27",
+      "redDim": "VariableID:2:29",
+      "amberDim": "VariableID:2:31",
+      "s0": "VariableID:2:32",
+      "s4": "VariableID:2:33",
+      "s8": "VariableID:2:34",
+      "s12": "VariableID:2:35",
+      "s16": "VariableID:2:36",
+      "s24": "VariableID:2:37",
+      "s32": "VariableID:2:38",
+      "s40": "VariableID:2:39",
+      "s48": "VariableID:2:40",
+      "s64": "VariableID:2:41",
+      "s80": "VariableID:2:42",
+      "r0": "VariableID:2:43",
+      "r8": "VariableID:2:44",
+      "r16": "VariableID:2:45",
+      "r24": "VariableID:2:46",
+      "r999": "VariableID:2:47"
+    },
+    "styles": {
+      "display": "S:9954bd486f84b9fef99834d08de2e4f6278cb7d3,",
+      "title": "S:8fe7f302205a31262f9e8128f625d34a4ee362cf,",
+      "heading": "S:32227e2419427c4d32d24c023decabedc09c87c5,",
+      "body": "S:4cdff46cd5525c07d33e6f7d8eef044376fd7eaa,",
+      "label": "S:a61812266838efafcb811f304cd0ca9fb1897fba,",
+      "button": "S:1971ddcdb05d1b4ad58d257f6320e979d14c38e5,"
+    },
+    "visual_reference": "사용자 제공 이미지의 검정·웜그레이·민트, 가는 방사선·구름·별 모티프. 편집 가능한 벡터로 제작."
+  },
+  "prototype": {
+    "navigation_links": 474,
+    "scope": "화면 이동 프로토타입. API 호출·파일 업로드·PDF 생성·인증은 구현되지 않음.",
+    "decision_routes": {
+      "continue": "post_launch",
+      "more_validation": "proposal",
+      "revise": [
+        "hypotheses",
+        "business_model"
+      ],
+      "stop": "archive"
+    }
+  },
+  "validation": {
+    "screen_count": 16,
+    "frame_count": 39,
+    "default_and_empty": true,
+    "all_width_1440": true,
+    "example_banner_all_frames": true,
+    "token_colors": "39개 화면 검사에서 SVG 장식 컨테이너 1개의 미바인딩 fill을 발견해 제거함. 나머지 화면 색상은 변수 바인딩 확인.",
+    "node_ids": "실제 Figma 노드에서 추출",
+    "text_bounds": "초기 범위 검사에서 텍스트의 부모 밖 이탈 없음. 추가 시각 검수에서 Input 내부 텍스트 폭 제약 문제 발견.",
+    "status": "created_with_remaining_visual_fix"
+  },
+  "sharing": {
+    "status": "로그아웃 브라우저에서 파일 편집기 진입 확인. 링크 보기 가능. 공유 설정 메뉴는 로그인 필요."
+  },
+  "remaining_work": [
+    {
+      "area": "Input instances",
+      "issue": "일부 입력 값이 컴포넌트 초기 텍스트 폭을 유지해 불필요하게 줄바꿈됩니다.",
+      "fix": "Input 인스턴스 resize 후 텍스트 textAutoResize=HEIGHT, width=parent.width-24, layoutSizingHorizontal=FILL를 마지막에 적용하고 counterAxisSizingMode=AUTO/minHeight=52로 보정. 오류가 아니라 플랜 호출 한도로 수정 호출이 실행되지 않음.",
+      "example_node_id": "I6:710;3:246"
+    },
+    {
+      "area": "Final QA",
+      "issue": "Input 수정 후 01_Components 및 00_Handoff 전체와 02_Screens 대표 화면의 최종 재검수 필요."
+    }
+  ]
+}

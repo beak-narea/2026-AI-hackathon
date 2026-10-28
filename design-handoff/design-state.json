@@ -1,0 +1,2452 @@
+{
+  "fileKey": "V29LNKH5qnfFmcJ9QrJVGU",
+  "sessionId": "e3e7fa35-2946-4cf8-bbbc-8dcc511a4781",
+  "design": {
+    "pages": {
+      "00_Handoff": "0:1",
+      "01_Components": "2:2",
+      "02_Screens": "2:3"
+    },
+    "vars": {
+      "bg": "VariableID:2:7",
+      "surface": "VariableID:2:9",
+      "raised": "VariableID:2:11",
+      "ink": "VariableID:2:13",
+      "muted": "VariableID:2:15",
+      "line": "VariableID:2:17",
+      "mint": "VariableID:2:19",
+      "warm": "VariableID:2:21",
+      "red": "VariableID:2:23",
+      "amber": "VariableID:2:25",
+      "mintDim": "VariableID:2:27",
+      "redDim": "VariableID:2:29",
+      "amberDim": "VariableID:2:31",
+      "s0": "VariableID:2:32",
+      "s4": "VariableID:2:33",
+      "s8": "VariableID:2:34",
+      "s12": "VariableID:2:35",
+      "s16": "VariableID:2:36",
+      "s24": "VariableID:2:37",
+      "s32": "VariableID:2:38",
+      "s40": "VariableID:2:39",
+      "s48": "VariableID:2:40",
+      "s64": "VariableID:2:41",
+      "s80": "VariableID:2:42",
+      "r0": "VariableID:2:43",
+      "r8": "VariableID:2:44",
+      "r16": "VariableID:2:45",
+      "r24": "VariableID:2:46",
+      "r999": "VariableID:2:47"
+    },
+    "styles": {
+      "display": "S:9954bd486f84b9fef99834d08de2e4f6278cb7d3,",
+      "title": "S:8fe7f302205a31262f9e8128f625d34a4ee362cf,",
+      "heading": "S:32227e2419427c4d32d24c023decabedc09c87c5,",
+      "body": "S:4cdff46cd5525c07d33e6f7d8eef044376fd7eaa,",
+      "label": "S:a61812266838efafcb811f304cd0ca9fb1897fba,",
+      "button": "S:1971ddcdb05d1b4ad58d257f6320e979d14c38e5,"
+    },
+    "collections": [
+      "VariableCollectionId:2:4",
+      "VariableCollectionId:2:5"
+    ],
+    "variableIds": [
+      "VariableID:2:6",
+      "VariableID:2:7",
+      "VariableID:2:8",
+      "VariableID:2:9",
+      "VariableID:2:10",
+      "VariableID:2:11",
+      "VariableID:2:12",
+      "VariableID:2:13",
+      "VariableID:2:14",
+      "VariableID:2:15",
+      "VariableID:2:16",
+      "VariableID:2:17",
+      "VariableID:2:18",
+      "VariableID:2:19",
+      "VariableID:2:20",
+      "VariableID:2:21",
+      "VariableID:2:22",
+      "VariableID:2:23",
+      "VariableID:2:24",
+      "VariableID:2:25",
+      "VariableID:2:26",
+      "VariableID:2:27",
+      "VariableID:2:28",
+      "VariableID:2:29",
+      "VariableID:2:30",
+      "VariableID:2:31",
+      "VariableID:2:32",
+      "VariableID:2:33",
+      "VariableID:2:34",
+      "VariableID:2:35",
+      "VariableID:2:36",
+      "VariableID:2:37",
+      "VariableID:2:38",
+      "VariableID:2:39",
+      "VariableID:2:40",
+      "VariableID:2:41",
+      "VariableID:2:42",
+      "VariableID:2:43",
+      "VariableID:2:44",
+      "VariableID:2:45",
+      "VariableID:2:46",
+      "VariableID:2:47"
+    ],
+    "createdNodeIds": [
+      "0:1",
+      "2:2",
+      "2:3"
+    ],
+    "discovery": {
+      "codeConnect": "No files in workspace",
+      "existingScreens": "Empty new file",
+      "libraries": "SDS inspected; custom Korean components required for exact enum and supplied black/warm-gray/mint style",
+      "font": "Noto Sans KR"
+    }
+  },
+  "components": {
+    "components": {
+      "EvidenceBadge": {
+        "name": "EvidenceBadge",
+        "node_id": "3:15",
+        "variant_prop": "level",
+        "values": [
+          "L0",
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "variants": {
+          "L0": "3:5",
+          "L1": "3:7",
+          "L2": "3:9",
+          "L3": "3:11",
+          "L4": "3:13"
+        }
+      },
+      "VerdictBadge": {
+        "name": "VerdictBadge",
+        "node_id": "3:37",
+        "variant_prop": "result",
+        "values": [
+          "met",
+          "not_met",
+          "on_hold",
+          "no_conclusion"
+        ],
+        "variants": {
+          "met": "3:29",
+          "not_met": "3:31",
+          "on_hold": "3:33",
+          "no_conclusion": "3:35"
+        }
+      },
+      "HypothesisStatus": {
+        "name": "HypothesisStatus",
+        "node_id": "3:61",
+        "variant_prop": "status",
+        "values": [
+          "unverified",
+          "in_progress",
+          "met",
+          "not_met",
+          "on_hold",
+          "needs_recheck"
+        ],
+        "variants": {
+          "unverified": "3:49",
+          "in_progress": "3:51",
+          "met": "3:53",
+          "not_met": "3:55",
+          "on_hold": "3:57",
+          "needs_recheck": "3:59"
+        }
+      },
+      "CriticalityTag": {
+        "name": "CriticalityTag",
+        "node_id": "3:83",
+        "variant_prop": "level",
+        "values": [
+          "critical",
+          "major",
+          "minor"
+        ],
+        "variants": {
+          "critical": "3:77",
+          "major": "3:79",
+          "minor": "3:81"
+        }
+      },
+      "ZoneChip": {
+        "name": "ZoneChip",
+        "node_id": "3:101",
+        "variant_prop": "zone",
+        "values": [
+          "green",
+          "red",
+          "rnd",
+          "low"
+        ],
+        "variants": {
+          "green": "3:93",
+          "red": "3:95",
+          "rnd": "3:97",
+          "low": "3:99"
+        }
+      },
+      "WrapperItemStatus": {
+        "name": "WrapperItemStatus",
+        "node_id": "3:119",
+        "variant_prop": "status",
+        "values": [
+          "yes",
+          "no",
+          "unknown"
+        ],
+        "variants": {
+          "yes": "3:113",
+          "no": "3:115",
+          "unknown": "3:117"
+        }
+      },
+      "RiskLevel": {
+        "name": "RiskLevel",
+        "node_id": "3:135",
+        "variant_prop": "level",
+        "values": [
+          "high",
+          "mid",
+          "low"
+        ],
+        "variants": {
+          "high": "3:129",
+          "mid": "3:131",
+          "low": "3:133"
+        }
+      },
+      "AgencyChoice": {
+        "name": "AgencyChoice",
+        "node_id": "3:155",
+        "variant_prop": "level",
+        "values": [
+          "H1",
+          "H2",
+          "H3",
+          "H4",
+          "H5"
+        ],
+        "variants": {
+          "H1": "3:145",
+          "H2": "3:147",
+          "H3": "3:149",
+          "H4": "3:151",
+          "H5": "3:153"
+        }
+      },
+      "ProposalStatus": {
+        "name": "ProposalStatus",
+        "node_id": "3:177",
+        "variant_prop": "status",
+        "values": [
+          "draft",
+          "sent",
+          "awaiting",
+          "received"
+        ],
+        "variants": {
+          "draft": "3:169",
+          "sent": "3:171",
+          "awaiting": "3:173",
+          "received": "3:175"
+        }
+      },
+      "ConnectionStatus": {
+        "name": "ConnectionStatus",
+        "node_id": "3:195",
+        "variant_prop": "status",
+        "values": [
+          "connected",
+          "error",
+          "disconnected"
+        ],
+        "variants": {
+          "connected": "3:189",
+          "error": "3:191",
+          "disconnected": "3:193"
+        }
+      },
+      "DecisionChoice": {
+        "name": "DecisionChoice",
+        "node_id": "3:213",
+        "variant_prop": "choice",
+        "values": [
+          "continue",
+          "revise",
+          "stop",
+          "more_validation"
+        ],
+        "variants": {
+          "continue": "3:205",
+          "revise": "3:207",
+          "stop": "3:209",
+          "more_validation": "3:211"
+        }
+      },
+      "Button": {
+        "name": "Button",
+        "node_id": "3:233",
+        "variant_prop": "kind",
+        "values": [
+          "primary",
+          "secondary",
+          "ghost",
+          "disabled"
+        ],
+        "variants": {
+          "primary": "3:225",
+          "secondary": "3:227",
+          "ghost": "3:229",
+          "disabled": "3:231"
+        }
+      },
+      "Input": {
+        "name": "Input",
+        "node_id": "3:251",
+        "variant_prop": "state",
+        "values": [
+          "default",
+          "disabled",
+          "error"
+        ],
+        "variants": {
+          "default": "3:245",
+          "disabled": "3:247",
+          "error": "3:249"
+        }
+      },
+      "ProvisionalLabel": {
+        "name": "ProvisionalLabel",
+        "node_id": "3:261",
+        "variant_prop": null,
+        "values": []
+      },
+      "ExampleBanner": {
+        "name": "ExampleBanner",
+        "node_id": "3:263",
+        "variant_prop": null,
+        "values": []
+      }
+    },
+    "board": "3:2",
+    "createdNodeIds": [
+      "3:2",
+      "3:3",
+      "3:4",
+      "3:5",
+      "3:6",
+      "3:7",
+      "3:8",
+      "3:9",
+      "3:10",
+      "3:11",
+      "3:12",
+      "3:13",
+      "3:14",
+      "3:15",
+      "3:16",
+      "3:17",
+      "3:18",
+      "3:19",
+      "3:21",
+      "3:23",
+      "3:25",
+      "3:27",
+      "3:29",
+      "3:30",
+      "3:31",
+      "3:32",
+      "3:33",
+      "3:34",
+      "3:35",
+      "3:36",
+      "3:37",
+      "3:38",
+      "3:39",
+      "3:40",
+      "3:41",
+      "3:43",
+      "3:45",
+      "3:47",
+      "3:49",
+      "3:50",
+      "3:51",
+      "3:52",
+      "3:53",
+      "3:54",
+      "3:55",
+      "3:56",
+      "3:57",
+      "3:58",
+      "3:59",
+      "3:60",
+      "3:61",
+      "3:62",
+      "3:63",
+      "3:64",
+      "3:65",
+      "3:67",
+      "3:69",
+      "3:71",
+      "3:73",
+      "3:75",
+      "3:77",
+      "3:78",
+      "3:79",
+      "3:80",
+      "3:81",
+      "3:82",
+      "3:83",
+      "3:84",
+      "3:85",
+      "3:86",
+      "3:87",
+      "3:89",
+      "3:91",
+      "3:93",
+      "3:94",
+      "3:95",
+      "3:96",
+      "3:97",
+      "3:98",
+      "3:99",
+      "3:100",
+      "3:101",
+      "3:102",
+      "3:103",
+      "3:104",
+      "3:105",
+      "3:107",
+      "3:109",
+      "3:111",
+      "3:113",
+      "3:114",
+      "3:115",
+      "3:116",
+      "3:117",
+      "3:118",
+      "3:119",
+      "3:120",
+      "3:121",
+      "3:122",
+      "3:123",
+      "3:125",
+      "3:127",
+      "3:129",
+      "3:130",
+      "3:131",
+      "3:132",
+      "3:133",
+      "3:134",
+      "3:135",
+      "3:136",
+      "3:137",
+      "3:138",
+      "3:139",
+      "3:141",
+      "3:143",
+      "3:145",
+      "3:146",
+      "3:147",
+      "3:148",
+      "3:149",
+      "3:150",
+      "3:151",
+      "3:152",
+      "3:153",
+      "3:154",
+      "3:155",
+      "3:156",
+      "3:157",
+      "3:158",
+      "3:159",
+      "3:161",
+      "3:163",
+      "3:165",
+      "3:167",
+      "3:169",
+      "3:170",
+      "3:171",
+      "3:172",
+      "3:173",
+      "3:174",
+      "3:175",
+      "3:176",
+      "3:177",
+      "3:178",
+      "3:179",
+      "3:180",
+      "3:181",
+      "3:183",
+      "3:185",
+      "3:187",
+      "3:189",
+      "3:190",
+      "3:191",
+      "3:192",
+      "3:193",
+      "3:194",
+      "3:195",
+      "3:196",
+      "3:197",
+      "3:198",
+      "3:199",
+      "3:201",
+      "3:203",
+      "3:205",
+      "3:206",
+      "3:207",
+      "3:208",
+      "3:209",
+      "3:210",
+      "3:211",
+      "3:212",
+      "3:213",
+      "3:214",
+      "3:215",
+      "3:216",
+      "3:217",
+      "3:219",
+      "3:221",
+      "3:223",
+      "3:225",
+      "3:226",
+      "3:227",
+      "3:228",
+      "3:229",
+      "3:230",
+      "3:231",
+      "3:232",
+      "3:233",
+      "3:234",
+      "3:235",
+      "3:236",
+      "3:237",
+      "3:239",
+      "3:241",
+      "3:243",
+      "3:245",
+      "3:246",
+      "3:247",
+      "3:248",
+      "3:249",
+      "3:250",
+      "3:251",
+      "3:252",
+      "3:253",
+      "3:254",
+      "3:255",
+      "3:257",
+      "3:259",
+      "3:261",
+      "3:262",
+      "3:263",
+      "3:264"
+    ]
+  },
+  "screens": [
+    {
+      "screen_key": "landing",
+      "title": "만들기 전에,\n만들 이유부터.",
+      "kicker": "AI 스타트업을 위한 검증 공간",
+      "desc": "아이디어를 진단하고, 실험을 제안하고,\n돌아온 증거로 다음 선택을 돕습니다.",
+      "sections": [
+        {
+          "title": "실행은 팀이, 판단의 근거는 여기서.",
+          "items": [
+            {
+              "kind": "note",
+              "text": "01  사업 모델과 위험 가정을 정리합니다.\n02  검증 실험 및 MVP 기획서를 받습니다.\n03  팀이 실행한 결과를 제출하고 판정받습니다."
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "kind": "action",
+          "key": "nav:auth",
+          "label": "아이디어 검증 시작하기",
+          "target": "auth",
+          "style": "secondary"
+        },
+        {
+          "kind": "action",
+          "key": "example.open",
+          "label": "예시 프로젝트 둘러보기",
+          "target": "dashboard",
+          "style": "secondary"
+        }
+      ],
+      "states": [
+        "default",
+        "empty"
+      ]
+    },
+    {
+      "screen_key": "auth",
+      "title": "아이디어의 다음 선택을\n함께 시작하세요.",
+      "kicker": "시작하기",
+      "desc": "한국어로 정리하고, 증거를 쌓고, 팀과 결정하세요.",
+      "sections": [
+        {
+          "title": "로그인 · 회원가입",
+          "items": [
+            {
+              "kind": "field",
+              "key": "auth.email",
+              "label": "이메일",
+              "value": "team@example.test"
+            },
+            {
+              "kind": "field",
+              "key": "auth.password",
+              "label": "비밀번호",
+              "value": "••••••••"
+            },
+            {
+              "kind": "field",
+              "key": "terms.accepted",
+              "label": "이용약관 및 데이터 처리 안내 동의",
+              "value": "동의 전"
+            },
+            {
+              "kind": "note",
+              "text": "원자료의 소유권은 고객 팀에 있습니다. 데이터 활용 범위는 약관에서 확인할 수 있습니다."
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "kind": "action",
+          "key": "auth.sign_in",
+          "label": "로그인",
+          "target": "projects",
+          "style": "primary"
+        },
+        {
+          "kind": "action",
+          "key": "auth.sign_up",
+          "label": "회원가입",
+          "target": "projects",
+          "style": "secondary"
+        },
+        {
+          "kind": "action",
+          "key": "terms.accept",
+          "label": "약관 확인 및 동의",
+          "target": null,
+          "style": "secondary"
+        }
+      ],
+      "states": [
+        "default",
+        "empty"
+      ]
+    },
+    {
+      "screen_key": "projects",
+      "title": "프로젝트",
+      "kicker": "우리 팀의 검증 공간",
+      "desc": "검증할 아이디어를 선택하거나 새로 시작하세요.",
+      "sections": [
+        {
+          "title": "진행 중인 프로젝트",
+          "items": [
+            {
+              "kind": "value",
+              "key": "project.name",
+              "label": "프로젝트",
+              "value": "세무사 사무실용 AI 증빙 분류"
+            },
+            {
+              "kind": "value",
+              "key": "project.idea_text",
+              "label": "핵심 아이디어",
+              "value": "반복되는 증빙 분류를 AI가 제안하고 담당자가 승인합니다."
+            },
+            {
+              "kind": "value",
+              "key": "project.created_at",
+              "label": "생성일",
+              "value": "2026.10.24"
+            },
+            {
+              "kind": "badge",
+              "component": "ProjectStatus",
+              "value": "active",
+              "key": "project.status"
+            },
+            {
+              "kind": "action",
+              "key": "nav:dashboard",
+              "label": "프로젝트 열기",
+              "target": "dashboard",
+              "style": "secondary"
+            }
+          ]
+        },
+        {
+          "title": "처음이라면, 완성된 흐름부터",
+          "items": [
+            {
+              "kind": "note",
+              "text": "가상 사례의 진단부터 의사결정까지 살펴보세요."
+            },
+            {
+              "kind": "action",
+              "key": "example.open",
+              "label": "예시 열기",
+              "target": "dashboard",
+              "style": "secondary"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "kind": "action",
+          "key": "nav:project_create",
+          "label": "새 프로젝트",
+          "target": "project_create",
+          "style": "secondary"
+        },
+        {
+          "kind": "action",
+          "key": "nav:archive",
+          "label": "보관함",
+          "target": "archive",
+          "style": "secondary"
+        }
+      ],
+      "states": [
+        "default",
+        "empty"
+      ]
+    },
+    {
+      "screen_key": "project_create",
+      "title": "어떤 아이디어를\n검증하고 싶나요?",
+      "kicker": "새 프로젝트",
+      "desc": "자료를 가져오면 사업 모델의 초안을 만듭니다. 작성 후 직접 수정할 수 있습니다.",
+      "sections": [
+        {
+          "title": "아이디어 입력",
+          "items": [
+            {
+              "kind": "field",
+              "key": "project.name",
+              "label": "프로젝트 이름",
+              "value": "세무사 사무실용 AI 증빙 분류"
+            },
+            {
+              "kind": "field",
+              "key": "project.idea_text",
+              "label": "고객과 해결하려는 문제",
+              "value": "세무사 사무실의 증빙 분류 시간을 줄이고 싶습니다."
+            },
+            {
+              "kind": "field",
+              "key": "business_model.source_files",
+              "label": "피치덱 · PDF · 사진",
+              "value": "증빙분류_기획.pdf"
+            },
+            {
+              "kind": "field",
+              "key": "business_model.source_url",
+              "label": "웹사이트 주소",
+              "value": "https://example.test"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "kind": "action",
+          "key": "project.create",
+          "label": "프로젝트 만들기",
+          "target": "business_model",
+          "style": "primary"
+        },
+        {
+          "kind": "action",
+          "key": "business_model.extract",
+          "label": "자료에서 사업 모델 추출",
+          "target": "business_model",
+          "style": "secondary"
+        }
+      ],
+      "states": [
+        "default",
+        "empty"
+      ]
+    },
+    {
+      "screen_key": "dashboard",
+      "title": "다음 결정에 필요한\n증거를 모으세요.",
+      "kicker": "프로젝트 대시보드",
+      "desc": "현재 검증 흐름과 가장 먼저 확인해야 할 가정을 한눈에 확인합니다.",
+      "sections": [
+        {
+          "title": "지금 확인할 위험 가정",
+          "items": [
+            {
+              "kind": "value",
+              "key": "hypothesis.statement",
+              "label": "우선 검증 가설",
+              "value": "세무 담당자는 AI가 분류한 증빙을 실제 업무에 맡긴다."
+            },
+            {
+              "kind": "badge",
+              "component": "CriticalityTag",
+              "value": "critical",
+              "key": "hypothesis.criticality"
+            },
+            {
+              "kind": "badge",
+              "component": "EvidenceBadge",
+              "value": "L1",
+              "key": "hypothesis.evidence_level"
+            },
+            {
+              "kind": "badge",
+              "component": "HypothesisStatus",
+              "value": "in_progress",
+              "key": "hypothesis.status"
+            },
+            {
+              "kind": "action",
+              "key": "nav:proposal",
+              "label": "검증 제안 확인",
+              "target": "proposal",
+              "style": "secondary"
+            }
+          ]
+        },
+        {
+          "title": "현재 검증 사이클",
+          "items": [
+            {
+              "kind": "value",
+              "key": "cycle.name",
+              "label": "사이클",
+              "value": "첫 번째 · 자동화 수요"
+            },
+            {
+              "kind": "value",
+              "key": "cycle.period",
+              "label": "진행 기간",
+              "value": "2026.10.24 – 2026.11.06"
+            },
+            {
+              "kind": "value",
+              "key": "proposal.status",
+              "label": "진행 상태",
+              "value": "결과 대기"
+            },
+            {
+              "kind": "value",
+              "key": "dashboard.next_action",
+              "label": "다음 행동",
+              "value": "팀이 실행한 테스트의 원자료를 제출하세요."
+            },
+            {
+              "kind": "action",
+              "key": "nav:results",
+              "label": "결과 제출하기",
+              "target": "results",
+              "style": "secondary"
+            }
+          ]
+        },
+        {
+          "title": "증거와 계획 점검",
+          "items": [
+            {
+              "kind": "value",
+              "key": "dashboard.alert",
+              "label": "검토할 불일치",
+              "value": "완전 자동화를 가정했지만 인터뷰에서는 검토·승인을 선호합니다."
+            },
+            {
+              "kind": "badge",
+              "component": "EvidenceBadge",
+              "value": "L1",
+              "key": "hypothesis.evidence_level"
+            },
+            {
+              "kind": "note",
+              "text": "진술은 참고만 사용합니다. 행동 실험으로 선호를 확인하세요."
+            },
+            {
+              "kind": "action",
+              "key": "nav:hypotheses",
+              "label": "관련 가설 보기",
+              "target": "hypotheses",
+              "style": "secondary"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "kind": "action",
+          "key": "nav:business_model",
+          "label": "사업 모델 보기",
+          "target": "business_model",
+          "style": "secondary"
+        }
+      ],
+      "states": [
+        "default",
+        "empty"
+      ]
+    },
+    {
+      "screen_key": "business_model",
+      "title": "사업 모델",
+      "kicker": "만들기 전 / 01",
+      "desc": "원본 자료와 가정을 분리하고, 변경된 모델을 버전으로 남깁니다.",
+      "sections": [
+        {
+          "title": "Lean Canvas",
+          "items": [
+            {
+              "kind": "field",
+              "key": "business_model.problem",
+              "label": "문제",
+              "value": "증빙을 수작업으로 분류하는 데 반복 시간이 든다."
+            },
+            {
+              "kind": "field",
+              "key": "business_model.customer_segments",
+              "label": "고객",
+              "value": "소규모 세무사 사무실의 실무자와 대표"
+            },
+            {
+              "kind": "field",
+              "key": "business_model.unique_value_proposition",
+              "label": "고유 가치 제안",
+              "value": "증빙 초안을 빠르게 분류하고 승인 흐름까지 연결"
+            },
+            {
+              "kind": "field",
+              "key": "business_model.solution",
+              "label": "해결책",
+              "value": "AI 분류 제안 + 담당자 검토·승인"
+            },
+            {
+              "kind": "field",
+              "key": "business_model.channels",
+              "label": "유통 경로",
+              "value": "세무 업무 커뮤니티와 파일럿 소개"
+            },
+            {
+              "kind": "field",
+              "key": "business_model.revenue_streams",
+              "label": "수익원",
+              "value": "사무실 단위 이용료"
+            },
+            {
+              "kind": "field",
+              "key": "business_model.cost_structure",
+              "label": "비용 구조",
+              "value": "모델 호출, 저장, 담당자 검수"
+            },
+            {
+              "kind": "field",
+              "key": "business_model.key_metrics",
+              "label": "핵심 지표",
+              "value": "실제 위임률, 수정 없이 채택한 비율"
+            },
+            {
+              "kind": "field",
+              "key": "business_model.unfair_advantage",
+              "label": "방어력 가정",
+              "value": "고객 업무 흐름에 연결된 승인 이력"
+            }
+          ]
+        },
+        {
+          "title": "원본과 버전",
+          "items": [
+            {
+              "kind": "value",
+              "key": "business_model.version",
+              "label": "현재 버전",
+              "value": "v2"
+            },
+            {
+              "kind": "value",
+              "key": "business_model.source_files",
+              "label": "원본 자료",
+              "value": "증빙분류_기획.pdf"
+            },
+            {
+              "kind": "value",
+              "key": "business_model.comparison_note",
+              "label": "변형 아이디어 비교",
+              "value": "A: 완전 자동 분류 / B: 분류 초안 + 승인"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "kind": "action",
+          "key": "business_model.save_version",
+          "label": "새 버전 저장",
+          "target": null,
+          "style": "primary"
+        },
+        {
+          "kind": "action",
+          "key": "business_model.compare",
+          "label": "아이디어 비교",
+          "target": null,
+          "style": "secondary"
+        },
+        {
+          "kind": "action",
+          "key": "business_model.extract",
+          "label": "자료에서 다시 추출",
+          "target": null,
+          "style": "secondary"
+        },
+        {
+          "kind": "action",
+          "key": "nav:diagnosis",
+          "label": "진단으로",
+          "target": "diagnosis",
+          "style": "secondary"
+        }
+      ],
+      "states": [
+        "default",
+        "empty"
+      ]
+    },
+    {
+      "screen_key": "diagnosis",
+      "title": "가능한 것과,\n원하는 것을 구분합니다.",
+      "kicker": "만들기 전 / 02",
+      "desc": "점수 대신 확인할 가정과 근거를 보여줍니다. 실측 자료가 부족하면 잠정 상태입니다.",
+      "sections": [
+        {
+          "title": "자동화 수요 · 업무별 진단",
+          "items": [
+            {
+              "kind": "field",
+              "key": "task.name",
+              "label": "업무",
+              "value": "증빙 항목 분류"
+            },
+            {
+              "kind": "badge",
+              "component": "TaskRole",
+              "value": "practitioner",
+              "key": "task.role"
+            },
+            {
+              "kind": "badge",
+              "component": "ZoneChip",
+              "value": "green",
+              "key": "diagnosis.zone"
+            },
+            {
+              "kind": "badge",
+              "component": "ProvisionalLabel",
+              "value": null,
+              "key": "diagnosis.is_provisional"
+            },
+            {
+              "kind": "badge",
+              "component": "EvidenceBadge",
+              "value": "L1",
+              "key": "diagnosis.demand_level"
+            },
+            {
+              "kind": "value",
+              "key": "diagnosis.demand_prior",
+              "label": "참고용 수요 사전값",
+              "value": "0.68 · 판정에 사용하지 않음"
+            },
+            {
+              "kind": "badge",
+              "component": "EvidenceBadge",
+              "value": "L0",
+              "key": "diagnosis.feasibility_level"
+            },
+            {
+              "kind": "note",
+              "text": "실무자 수요와 구매자 수요를 별도로 수집합니다. 현재 구역은 가정이며 실측 판정이 아닙니다."
+            },
+            {
+              "kind": "action",
+              "key": "diagnosis.update_task",
+              "label": "업무 수정",
+              "target": null,
+              "style": "secondary"
+            }
+          ]
+        },
+        {
+          "title": "완전 자동화 vs 사람 보조",
+          "items": [
+            {
+              "kind": "badge",
+              "component": "AgencyChoice",
+              "value": "H1",
+              "key": "diagnosis.agency_assumed"
+            },
+            {
+              "kind": "badge",
+              "component": "AgencyChoice",
+              "value": "H4",
+              "key": "diagnosis.agency_observed"
+            },
+            {
+              "kind": "badge",
+              "component": "EvidenceBadge",
+              "value": "L1",
+              "key": "diagnosis.demand_level"
+            },
+            {
+              "kind": "note",
+              "text": "고객의 실제 선택으로 재확인할 가설을 만듭니다."
+            }
+          ]
+        },
+        {
+          "title": "대체 위험 · API 래퍼 검토",
+          "items": [
+            {
+              "kind": "badge",
+              "component": "RiskLevel",
+              "value": "high",
+              "key": "diagnosis.wrapper_risk"
+            },
+            {
+              "kind": "value",
+              "key": "diagnosis.wrapper_items.item_key",
+              "label": "검토 항목",
+              "value": "독점 데이터 / 시스템 연동 / 검수 전문성 / 전환 비용 / 규제 장벽 / 빅테크 중복"
+            },
+            {
+              "kind": "badge",
+              "component": "WrapperItemStatus",
+              "value": "unknown",
+              "key": "diagnosis.wrapper_items.status"
+            },
+            {
+              "kind": "value",
+              "key": "diagnosis.wrapper_items.evidence_note",
+              "label": "근거",
+              "value": "고객 시스템 연동 깊이를 확인할 자료가 없습니다."
+            },
+            {
+              "kind": "value",
+              "key": "diagnosis.baseline_win_rate",
+              "label": "기준선 테스트",
+              "value": "아직 제출된 평가 결과 없음"
+            },
+            {
+              "kind": "badge",
+              "component": "EvidenceBadge",
+              "value": "L0",
+              "key": "diagnosis.feasibility_level"
+            },
+            {
+              "kind": "action",
+              "key": "baseline_test.start",
+              "label": "기준선 테스트 준비",
+              "target": null,
+              "style": "secondary"
+            }
+          ]
+        },
+        {
+          "title": "비용 계산기 · 사용자당 월 기준",
+          "items": [
+            {
+              "kind": "field",
+              "key": "cost_model.inputs.tasks_per_user",
+              "label": "월 작업 수",
+              "value": "1,000"
+            },
+            {
+              "kind": "field",
+              "key": "cost_model.inputs.calls_per_task",
+              "label": "작업당 호출 수",
+              "value": "2"
+            },
+            {
+              "kind": "field",
+              "key": "cost_model.inputs.input_tokens",
+              "label": "입력 토큰 / 호출",
+              "value": "800"
+            },
+            {
+              "kind": "field",
+              "key": "cost_model.inputs.output_tokens",
+              "label": "출력 토큰 / 호출",
+              "value": "200"
+            },
+            {
+              "kind": "field",
+              "key": "cost_model.inputs.unit_price",
+              "label": "입력·출력 단가 / 100만 토큰",
+              "value": "입력 300원 · 출력 1,200원"
+            },
+            {
+              "kind": "field",
+              "key": "cost_model.inputs.cache_saving",
+              "label": "캐시 절감률",
+              "value": "20%"
+            },
+            {
+              "kind": "field",
+              "key": "cost_model.inputs.retry_rate",
+              "label": "재시도율",
+              "value": "5%"
+            },
+            {
+              "kind": "field",
+              "key": "cost_model.inputs.review_hours",
+              "label": "작업당 검수 시간",
+              "value": "0.001시간"
+            },
+            {
+              "kind": "field",
+              "key": "cost_model.inputs.hourly_wage",
+              "label": "검수 시급",
+              "value": "20,000원"
+            },
+            {
+              "kind": "field",
+              "key": "cost_model.inputs.price",
+              "label": "월 가격",
+              "value": "50,000원"
+            },
+            {
+              "kind": "value",
+              "key": "cost_model.price_table_updated_at",
+              "label": "단가 갱신일",
+              "value": "2026.10.24 · 예시 단가"
+            },
+            {
+              "kind": "action",
+              "key": "cost_model.recalculate",
+              "label": "다시 계산",
+              "target": null,
+              "style": "secondary"
+            }
+          ]
+        },
+        {
+          "title": "규모별 마진과 수익 목표",
+          "items": [
+            {
+              "kind": "badge",
+              "component": "Scenario",
+              "value": "uniform",
+              "key": "cost_model.scenarios.scenario"
+            },
+            {
+              "kind": "value",
+              "key": "cost_model.scenarios.margin",
+              "label": "공헌이익률",
+              "value": "58.39% · 기타 변동비 0원 가정"
+            },
+            {
+              "kind": "value",
+              "key": "cost_model.sensitivity.case",
+              "label": "민감도 조건",
+              "value": "출력 토큰 2배"
+            },
+            {
+              "kind": "value",
+              "key": "cost_model.sensitivity.breakeven_price",
+              "label": "손익분기 가격",
+              "value": "21,209.6원"
+            },
+            {
+              "kind": "field",
+              "key": "cost_model.target_revenue",
+              "label": "월 수익 목표",
+              "value": "5,000,000원"
+            },
+            {
+              "kind": "value",
+              "key": "cost_model.required_customers",
+              "label": "필요 유료 고객",
+              "value": "100곳 · 매출 기준"
+            },
+            {
+              "kind": "note",
+              "text": "균등 / 관측 사례 / 극단 시나리오를 비교합니다. 사용량이 많은 고객의 마진도 따로 확인합니다."
+            }
+          ]
+        },
+        {
+          "title": "다차원 사업 가정",
+          "items": [
+            {
+              "kind": "value",
+              "key": "diagnosis.business_assumptions",
+              "label": "고객 수요 · 수익성 · 실현 가능성 · 방어력 · 타이밍",
+              "value": "실제 위임 수요, 유료 전환, 데이터 확보, 승인 이력의 가치, 도입 시점을 검증해야 합니다."
+            },
+            {
+              "kind": "value",
+              "key": "diagnosis.ai_value_assumptions",
+              "label": "AI 도입 가치",
+              "value": "오분류 비용과 필요한 정확도, 확보 가능한 데이터를 확인하세요."
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "kind": "action",
+          "key": "diagnosis.run",
+          "label": "진단 갱신",
+          "target": null,
+          "style": "primary"
+        },
+        {
+          "kind": "action",
+          "key": "nav:hypotheses",
+          "label": "위험 가설 보기",
+          "target": "hypotheses",
+          "style": "secondary"
+        }
+      ],
+      "states": [
+        "default",
+        "empty",
+        "loading"
+      ]
+    },
+    {
+      "screen_key": "hypotheses",
+      "title": "가장 위험한 가정부터.",
+      "kicker": "만들기 전 / 03",
+      "desc": "중요도가 높고 증거가 약한 가설을 먼저 검증합니다.",
+      "sections": [
+        {
+          "title": "우선 검증 가설",
+          "items": [
+            {
+              "kind": "value",
+              "key": "hypothesis.rank",
+              "label": "우선순위",
+              "value": "1"
+            },
+            {
+              "kind": "field",
+              "key": "hypothesis.statement",
+              "label": "측정 가능한 가설",
+              "value": "담당자의 70% 이상이 분류 작업을 실제로 맡긴다."
+            },
+            {
+              "kind": "badge",
+              "component": "HypothesisType",
+              "value": "demand",
+              "key": "hypothesis.type"
+            },
+            {
+              "kind": "badge",
+              "component": "CriticalityTag",
+              "value": "critical",
+              "key": "hypothesis.criticality"
+            },
+            {
+              "kind": "badge",
+              "component": "EvidenceBadge",
+              "value": "L1",
+              "key": "hypothesis.evidence_level"
+            },
+            {
+              "kind": "badge",
+              "component": "HypothesisStatus",
+              "value": "in_progress",
+              "key": "hypothesis.status"
+            }
+          ]
+        },
+        {
+          "title": "AI 특화 가설",
+          "items": [
+            {
+              "kind": "note",
+              "text": "결과물 신뢰 / 기대 정확도 / 데이터 확보 / 자동화 선호 / 수익성\n각 가설에 실제 채택률, 허용 정확도, 받은 데이터 건수처럼 측정할 값을 연결합니다."
+            },
+            {
+              "kind": "action",
+              "key": "hypothesis.create",
+              "label": "가설 추가",
+              "target": null,
+              "style": "secondary"
+            }
+          ]
+        },
+        {
+          "title": "독립적인 중요도 평정",
+          "items": [
+            {
+              "kind": "value",
+              "key": "criticality_rating.rater_name",
+              "label": "평가자",
+              "value": "예시 기획 담당자"
+            },
+            {
+              "kind": "badge",
+              "component": "RaterType",
+              "value": "team",
+              "key": "criticality_rating.rater_type"
+            },
+            {
+              "kind": "badge",
+              "component": "CriticalityTag",
+              "value": "critical",
+              "key": "criticality_rating.level"
+            },
+            {
+              "kind": "field",
+              "key": "criticality_rating.note",
+              "label": "평정 근거",
+              "value": "실제 업무를 맡기지 않으면 제품의 핵심 가치가 성립하지 않습니다."
+            },
+            {
+              "kind": "value",
+              "key": "criticality_rating.needs_review",
+              "label": "재검토",
+              "value": "외부 평가자와의 의견 차이를 확인하세요."
+            },
+            {
+              "kind": "action",
+              "key": "hypothesis.rate_criticality",
+              "label": "중요도 평정 저장",
+              "target": null,
+              "style": "secondary"
+            }
+          ]
+        },
+        {
+          "title": "바깥 관점",
+          "items": [
+            {
+              "kind": "value",
+              "key": "outside_view.sample_companies",
+              "label": "집계 대상",
+              "value": "10개 고객사 미만"
+            },
+            {
+              "kind": "note",
+              "text": "고객사가 10곳 미만이면 집계 미달률을 표시하지 않습니다."
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "kind": "action",
+          "key": "hypothesis.reorder",
+          "label": "검증 순서 저장",
+          "target": null,
+          "style": "primary"
+        },
+        {
+          "kind": "action",
+          "key": "nav:proposal",
+          "label": "검증 제안으로",
+          "target": "proposal",
+          "style": "secondary"
+        }
+      ],
+      "states": [
+        "default",
+        "empty"
+      ]
+    },
+    {
+      "screen_key": "proposal",
+      "title": "검증 실험 및\nMVP 기획서",
+      "kicker": "검증 / 01",
+      "desc": "실행 방법과 통과 기준을 먼저 정합니다. 실험은 고객 팀이 서비스 밖에서 진행합니다.",
+      "sections": [
+        {
+          "title": "검증 설계",
+          "items": [
+            {
+              "kind": "badge",
+              "component": "ProposalStatus",
+              "value": "draft",
+              "key": "proposal.status"
+            },
+            {
+              "kind": "value",
+              "key": "hypothesis.statement",
+              "label": "검증할 가설",
+              "value": "담당자가 AI 분류 작업을 실제 업무에 맡긴다."
+            },
+            {
+              "kind": "badge",
+              "component": "EvidenceBadge",
+              "value": "L1",
+              "key": "hypothesis.evidence_level"
+            },
+            {
+              "kind": "field",
+              "key": "proposal.method",
+              "label": "검증 방법",
+              "value": "오즈의 마법사 · 실제 위임 행동"
+            },
+            {
+              "kind": "field",
+              "key": "proposal.guide_steps",
+              "label": "단계별 실행 가이드",
+              "value": "1. 대상 모집 → 2. 작업 요청 → 3. 사람 보조 처리 → 4. 위임 여부 기록"
+            },
+            {
+              "kind": "field",
+              "key": "proposal.mvp_scope",
+              "label": "검증용 MVP 범위",
+              "value": "파일 제출 화면, 분류 초안, 검토·승인 화면만 준비"
+            },
+            {
+              "kind": "field",
+              "key": "proposal.interview_questions",
+              "label": "인터뷰 질문지",
+              "value": "지난번 증빙을 어떻게 분류했나요? 어느 단계에 시간이 가장 들었나요?"
+            },
+            {
+              "kind": "field",
+              "key": "proposal.pitch_draft",
+              "label": "판매 피치 초안",
+              "value": "분류 초안을 받아 검토 시간을 줄이는 파일럿에 참여하세요."
+            },
+            {
+              "kind": "field",
+              "key": "proposal.demo_outline",
+              "label": "데모 설계",
+              "value": "증빙 제출 → 분류 초안 → 수정·승인 흐름"
+            },
+            {
+              "kind": "value",
+              "key": "proposal.expected_weeks",
+              "label": "예상 기간",
+              "value": "2주"
+            }
+          ]
+        },
+        {
+          "title": "제안 시 잠그는 기준",
+          "items": [
+            {
+              "kind": "field",
+              "key": "proposal.target_value",
+              "label": "목표값",
+              "value": "70%"
+            },
+            {
+              "kind": "field",
+              "key": "proposal.min_value",
+              "label": "최소 허용치",
+              "value": "50%"
+            },
+            {
+              "kind": "field",
+              "key": "proposal.sample_size",
+              "label": "표본 크기",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "key": "proposal.locked_at",
+              "label": "잠금 상태",
+              "value": "아직 잠기지 않음"
+            },
+            {
+              "kind": "value",
+              "key": "proposal.decision_table.n",
+              "label": "결정표 · 표본 수",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "key": "proposal.decision_table.met_from",
+              "label": "충족 시작 건수",
+              "value": "통계 모듈 계산 후 표시"
+            },
+            {
+              "kind": "value",
+              "key": "proposal.decision_table.hold_range",
+              "label": "판정 보류 범위",
+              "value": "통계 모듈 계산 후 표시"
+            },
+            {
+              "kind": "value",
+              "key": "proposal.decision_table.fail_to",
+              "label": "미달 최대 건수",
+              "value": "통계 모듈 계산 후 표시"
+            },
+            {
+              "kind": "value",
+              "key": "proposal.conclusion_probability",
+              "label": "결론이 나올 확률",
+              "value": "계산 대기"
+            },
+            {
+              "kind": "value",
+              "key": "proposal.rejudge_count",
+              "label": "재판정 횟수",
+              "value": "0"
+            },
+            {
+              "kind": "note",
+              "text": "결정표 계산이 끝나기 전에는 기획서를 전달하지 않습니다."
+            }
+          ]
+        },
+        {
+          "title": "운영 수칙과 결과 제출",
+          "items": [
+            {
+              "kind": "note",
+              "text": "실험 목적 고지, 개인정보 처리, 환불 조건을 확인하세요. 결과 제출 폼에는 모집 방법·시도·응답·성공·원자료가 포함됩니다."
+            },
+            {
+              "kind": "value",
+              "key": "proposal.pdf_url",
+              "label": "기획서 파일",
+              "value": "검증기획서_v1.pdf"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "kind": "action",
+          "key": "proposal.generate",
+          "label": "기획서 초안 생성",
+          "target": null,
+          "style": "primary"
+        },
+        {
+          "kind": "action",
+          "key": "proposal.lock_thresholds",
+          "label": "통과 기준 잠금",
+          "target": null,
+          "style": "secondary"
+        },
+        {
+          "kind": "action",
+          "key": "proposal.export_pdf",
+          "label": "PDF 내보내기",
+          "target": null,
+          "style": "secondary"
+        },
+        {
+          "kind": "action",
+          "key": "nav:results",
+          "label": "실행 결과 제출",
+          "target": "results",
+          "style": "secondary"
+        }
+      ],
+      "states": [
+        "default",
+        "empty",
+        "locked"
+      ]
+    },
+    {
+      "screen_key": "results",
+      "title": "실행한 결과를\n증거로 남기세요.",
+      "kicker": "검증 / 02",
+      "desc": "제안과 달라진 점까지 기록해주세요. 결과는 이 제출 폼으로 받습니다.",
+      "sections": [
+        {
+          "title": "실험 방법과 모집",
+          "items": [
+            {
+              "kind": "value",
+              "key": "evidence.proposal_id",
+              "label": "검증 제안",
+              "value": "P-001"
+            },
+            {
+              "kind": "field",
+              "key": "evidence.method_same",
+              "label": "제안과 같은 방법으로 실행했나요?",
+              "value": "예"
+            },
+            {
+              "kind": "field",
+              "key": "evidence.method_diff_reason",
+              "label": "방법이 다른 경우 이유",
+              "value": "해당 없음"
+            },
+            {
+              "kind": "field",
+              "key": "evidence.recruitment",
+              "label": "모집 방식",
+              "value": "세무 업무 커뮤니티 공개 모집"
+            },
+            {
+              "kind": "field",
+              "key": "evidence.attempts",
+              "label": "시도 수",
+              "value": "20"
+            },
+            {
+              "kind": "field",
+              "key": "evidence.responses",
+              "label": "응답 수",
+              "value": "20"
+            },
+            {
+              "kind": "field",
+              "key": "evidence.successes",
+              "label": "성공 수",
+              "value": "14"
+            }
+          ]
+        },
+        {
+          "title": "원자료와 편향 점검",
+          "items": [
+            {
+              "kind": "field",
+              "key": "evidence.raw_files",
+              "label": "CSV · 전사본 · 사용 기록",
+              "value": "위임실험.csv / 인터뷰_전사본.txt"
+            },
+            {
+              "kind": "field",
+              "key": "evidence.has_raw",
+              "label": "원자료 포함 여부",
+              "value": "예"
+            },
+            {
+              "kind": "field",
+              "key": "evidence.acquaintance_ratio",
+              "label": "지인 비율",
+              "value": "0%"
+            },
+            {
+              "kind": "field",
+              "key": "evidence.same_company_count",
+              "label": "동일 회사 참여자 수",
+              "value": "1명 / 회사"
+            },
+            {
+              "kind": "field",
+              "key": "evidence.notice_given",
+              "label": "실험 고지 여부",
+              "value": "예"
+            },
+            {
+              "kind": "field",
+              "key": "evidence.memo",
+              "label": "추가 메모",
+              "value": "참여자는 분류 초안을 받고 최종 승인했습니다."
+            },
+            {
+              "kind": "action",
+              "key": "evidence.upload_raw",
+              "label": "원자료 업로드",
+              "target": null,
+              "style": "secondary"
+            }
+          ]
+        },
+        {
+          "title": "접수된 증거",
+          "items": [
+            {
+              "kind": "badge",
+              "component": "EvidenceBadge",
+              "value": "L3",
+              "key": "evidence.evidence_level"
+            },
+            {
+              "kind": "value",
+              "key": "evidence.effective_n",
+              "label": "유효 표본 수",
+              "value": "편향·군집 점검 후 계산"
+            }
+          ]
+        },
+        {
+          "title": "전사본 분석",
+          "items": [
+            {
+              "kind": "value",
+              "key": "evidence.interview_insights",
+              "label": "인사이트 후보",
+              "value": "속도보다 오분류를 확인할 수 있는 승인 절차를 중요하게 언급했습니다."
+            },
+            {
+              "kind": "value",
+              "key": "evidence.switching_motives",
+              "label": "전환 동기 후보",
+              "value": "반복 작업 시간 절감 · 기존 승인 절차 유지"
+            },
+            {
+              "kind": "value",
+              "key": "evidence.interview_quality",
+              "label": "진행 품질",
+              "value": "유도·미래 가정 질문을 검토하세요."
+            },
+            {
+              "kind": "badge",
+              "component": "EvidenceBadge",
+              "value": "L1",
+              "key": "evidence.transcript_level"
+            },
+            {
+              "kind": "note",
+              "text": "전사본은 참고만 사용합니다. 해석형 코드는 사람이 확정하며, 판정 대신 다음 실험에 활용합니다."
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "kind": "action",
+          "key": "evidence.submit",
+          "label": "결과 제출 및 판정 요청",
+          "target": "verdict",
+          "style": "primary"
+        }
+      ],
+      "states": [
+        "default",
+        "empty"
+      ]
+    },
+    {
+      "screen_key": "verdict",
+      "title": "증거가 말하는\n현재의 결론",
+      "kicker": "검증 / 03",
+      "desc": "판정과 최종 결정을 구분합니다. 결과가 부족하면 판단을 유보합니다.",
+      "sections": [
+        {
+          "title": "결과 판정",
+          "items": [
+            {
+              "kind": "badge",
+              "component": "VerdictBadge",
+              "value": "on_hold",
+              "key": "verdict.result"
+            },
+            {
+              "kind": "badge",
+              "component": "EvidenceBadge",
+              "value": "L3",
+              "key": "evidence.evidence_level"
+            },
+            {
+              "kind": "value",
+              "key": "hypothesis.statement",
+              "label": "대상 가설",
+              "value": "담당자의 70% 이상이 분류 작업을 실제로 맡긴다."
+            },
+            {
+              "kind": "value",
+              "key": "verdict.n",
+              "label": "원표본",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "key": "verdict.effective_n",
+              "label": "유효 표본",
+              "value": "20"
+            },
+            {
+              "kind": "value",
+              "key": "verdict.p_above_target",
+              "label": "목표값 이상일 확률",
+              "value": "통계 모듈 결과 연결"
+            },
+            {
+              "kind": "value",
+              "key": "verdict.p_below_min",
+              "label": "최소 허용치 이하일 확률",
+              "value": "통계 모듈 결과 연결"
+            },
+            {
+              "kind": "value",
+              "key": "verdict.wilson_low",
+              "label": "관측 비율 신뢰구간 하한",
+              "value": "통계 모듈 결과 연결"
+            },
+            {
+              "kind": "value",
+              "key": "verdict.wilson_high",
+              "label": "관측 비율 신뢰구간 상한",
+              "value": "통계 모듈 결과 연결"
+            },
+            {
+              "kind": "value",
+              "key": "verdict.rejudge_count",
+              "label": "재판정 횟수",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "title": "다음 검증 제안",
+          "items": [
+            {
+              "kind": "note",
+              "text": "현재 화면은 판정 상태를 설명하는 가상 사례입니다. 수치는 코드로 계산한 결과에 연결합니다. 추가 표본을 확보할 때도 처음 잠근 기준을 유지합니다."
+            },
+            {
+              "kind": "action",
+              "key": "nav:proposal",
+              "label": "추가 표본 검증 제안",
+              "target": "proposal",
+              "style": "secondary"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "kind": "action",
+          "key": "nav:decision",
+          "label": "권고 및 결정 검토",
+          "target": "decision",
+          "style": "secondary"
+        },
+        {
+          "kind": "action",
+          "key": "verdict.rejudge",
+          "label": "제출된 증거로 재판정",
+          "target": null,
+          "style": "secondary"
+        }
+      ],
+      "states": [
+        "default",
+        "empty",
+        "met",
+        "not_met",
+        "on_hold",
+        "no_conclusion"
+      ]
+    },
+    {
+      "screen_key": "decision",
+      "title": "권고를 검토하고,\n팀의 결정을 남기세요.",
+      "kicker": "검증 / 04",
+      "desc": "서비스는 근거를 정리해 권고합니다. 계속·수정·중단의 최종 결정은 팀이 합니다.",
+      "sections": [
+        {
+          "title": "서비스 권고",
+          "items": [
+            {
+              "kind": "badge",
+              "component": "DecisionChoice",
+              "value": "more_validation",
+              "key": "decision.recommendation"
+            },
+            {
+              "kind": "value",
+              "key": "decision.rationale",
+              "label": "권고 근거",
+              "value": "원표본과 편향 점검을 확인하고 추가 행동 증거를 확보하세요."
+            },
+            {
+              "kind": "badge",
+              "component": "EvidenceBadge",
+              "value": "L3",
+              "key": "evidence.evidence_level"
+            },
+            {
+              "kind": "badge",
+              "component": "VerdictBadge",
+              "value": "on_hold",
+              "key": "verdict.result"
+            }
+          ]
+        },
+        {
+          "title": "팀의 의사결정",
+          "items": [
+            {
+              "kind": "badge",
+              "component": "DecisionChoice",
+              "value": "more_validation",
+              "key": "decision.choice"
+            },
+            {
+              "kind": "badge",
+              "component": "ReasonType",
+              "value": "evidence",
+              "key": "decision.reason_type"
+            },
+            {
+              "kind": "field",
+              "key": "decision.decided_by",
+              "label": "결정자",
+              "value": "예시 프로젝트 담당자"
+            },
+            {
+              "kind": "value",
+              "key": "decision.decided_at",
+              "label": "결정 시각",
+              "value": "저장 시 기록"
+            },
+            {
+              "kind": "note",
+              "text": "선택: 계속 / 추가 검증 / 수정 / 중단\n수정 시 가설 수정 또는 사업 모델 수정을 선택합니다."
+            }
+          ]
+        },
+        {
+          "title": "다음 이동",
+          "items": [
+            {
+              "kind": "action",
+              "key": "nav:post_launch",
+              "label": "계속 · 출시 후 측정",
+              "target": "post_launch",
+              "style": "secondary"
+            },
+            {
+              "kind": "action",
+              "key": "nav:proposal",
+              "label": "추가 검증 · 제안으로",
+              "target": "proposal",
+              "style": "secondary"
+            },
+            {
+              "kind": "action",
+              "key": "nav:hypotheses",
+              "label": "수정 · 가설로",
+              "target": "hypotheses",
+              "style": "secondary"
+            },
+            {
+              "kind": "action",
+              "key": "nav:business_model",
+              "label": "수정 · 사업 모델로",
+              "target": "business_model",
+              "style": "secondary"
+            },
+            {
+              "kind": "action",
+              "key": "nav:archive",
+              "label": "중단 · 보관함으로",
+              "target": "archive",
+              "style": "secondary"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "kind": "action",
+          "key": "decision.record",
+          "label": "팀의 결정 저장",
+          "target": null,
+          "style": "primary"
+        }
+      ],
+      "states": [
+        "default",
+        "empty"
+      ]
+    },
+    {
+      "screen_key": "post_launch",
+      "title": "출시 후에도,\n같은 가설을 확인합니다.",
+      "kicker": "출시 후 / 01",
+      "desc": "고객사의 분석·모니터링 도구에서 받은 데이터로 다시 판정합니다.",
+      "sections": [
+        {
+          "title": "가설에서 지표로",
+          "items": [
+            {
+              "kind": "field",
+              "key": "metric_card.event_name",
+              "label": "이벤트 이름",
+              "value": "document_classification_approved"
+            },
+            {
+              "kind": "field",
+              "key": "metric_card.definition",
+              "label": "이벤트 정의",
+              "value": "분류 초안을 검토한 담당자가 최종 승인한 시점"
+            },
+            {
+              "kind": "field",
+              "key": "metric_card.target_value",
+              "label": "목표값",
+              "value": "70%"
+            },
+            {
+              "kind": "field",
+              "key": "metric_card.min_value",
+              "label": "최소 허용치",
+              "value": "50%"
+            },
+            {
+              "kind": "field",
+              "key": "metric_card.alert_rule",
+              "label": "경보 기준",
+              "value": "최소 허용치를 하회하면 재검증 요청"
+            },
+            {
+              "kind": "value",
+              "key": "metric_card.actual_value",
+              "label": "실제값",
+              "value": "동기화 대기"
+            },
+            {
+              "kind": "badge",
+              "component": "EvidenceBadge",
+              "value": "L3",
+              "key": "metric_card.evidence_level"
+            },
+            {
+              "kind": "badge",
+              "component": "VerdictBadge",
+              "value": "on_hold",
+              "key": "metric_card.recheck_result"
+            }
+          ]
+        },
+        {
+          "title": "외부 도구의 측정 결과",
+          "items": [
+            {
+              "kind": "value",
+              "key": "metric_card.measurement_summary",
+              "label": "고객 행동 · A/B 테스트 · 앱 내 설문",
+              "value": "연결된 도구에서 결과를 수령합니다."
+            },
+            {
+              "kind": "value",
+              "key": "metric_card.ai_summary",
+              "label": "AI 실행 · 출력 품질 · 실제 비용",
+              "value": "실제 비용·품질을 진단 당시 가정과 비교합니다."
+            },
+            {
+              "kind": "note",
+              "text": "측정값 → 결과 수령 → 결과 판정 → 팀 의사결정. 가설 상태를 바로 변경하지 않습니다."
+            },
+            {
+              "kind": "action",
+              "key": "nav:results",
+              "label": "수령한 증거 보기",
+              "target": "results",
+              "style": "secondary"
+            },
+            {
+              "kind": "action",
+              "key": "nav:diagnosis",
+              "label": "비용 가정과 비교",
+              "target": "diagnosis",
+              "style": "secondary"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "kind": "action",
+          "key": "metric_card.create",
+          "label": "지표 카드 생성",
+          "target": null,
+          "style": "primary"
+        },
+        {
+          "kind": "action",
+          "key": "metric_card.export_yaml",
+          "label": "YAML 내보내기",
+          "target": null,
+          "style": "secondary"
+        },
+        {
+          "kind": "action",
+          "key": "metric_card.export_csv",
+          "label": "CSV 내보내기",
+          "target": null,
+          "style": "secondary"
+        },
+        {
+          "kind": "action",
+          "key": "nav:data_connection",
+          "label": "데이터 연결",
+          "target": "data_connection",
+          "style": "secondary"
+        }
+      ],
+      "states": [
+        "default",
+        "empty"
+      ]
+    },
+    {
+      "screen_key": "data_connection",
+      "title": "데이터 연결",
+      "kicker": "출시 후 / 02",
+      "desc": "고객 팀이 사용하는 도구의 결과를 받아옵니다.",
+      "sections": [
+        {
+          "title": "분석 도구",
+          "items": [
+            {
+              "kind": "value",
+              "key": "data_connection.tool_name",
+              "label": "도구",
+              "value": "예시 분석 도구"
+            },
+            {
+              "kind": "badge",
+              "component": "ConnectionKind",
+              "value": "analytics",
+              "key": "data_connection.kind"
+            },
+            {
+              "kind": "badge",
+              "component": "ConnectionStatus",
+              "value": "connected",
+              "key": "data_connection.status"
+            },
+            {
+              "kind": "value",
+              "key": "data_connection.last_sync_at",
+              "label": "최근 동기화",
+              "value": "2026.10.24 10:30"
+            },
+            {
+              "kind": "action",
+              "key": "data_connection.remove",
+              "label": "연결 해제",
+              "target": null,
+              "style": "secondary"
+            }
+          ]
+        },
+        {
+          "title": "AI 모니터링 도구",
+          "items": [
+            {
+              "kind": "value",
+              "key": "data_connection.tool_name",
+              "label": "도구",
+              "value": "예시 AI 모니터링"
+            },
+            {
+              "kind": "badge",
+              "component": "ConnectionKind",
+              "value": "llm_monitoring",
+              "key": "data_connection.kind"
+            },
+            {
+              "kind": "badge",
+              "component": "ConnectionStatus",
+              "value": "disconnected",
+              "key": "data_connection.status"
+            },
+            {
+              "kind": "note",
+              "text": "키는 저장 후 마스킹하며 화면과 개발 인계 자료에 실제 비밀값을 포함하지 않습니다."
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "kind": "action",
+          "key": "data_connection.add",
+          "label": "도구 연결",
+          "target": null,
+          "style": "primary"
+        }
+      ],
+      "states": [
+        "default",
+        "empty",
+        "error"
+      ]
+    },
+    {
+      "screen_key": "project_settings",
+      "title": "프로젝트 설정",
+      "kicker": "프로젝트 관리",
+      "desc": "팀원과 데이터 보관 방식을 관리합니다.",
+      "sections": [
+        {
+          "title": "기본 정보",
+          "items": [
+            {
+              "kind": "field",
+              "key": "project.name",
+              "label": "프로젝트 이름",
+              "value": "세무사 사무실용 AI 증빙 분류"
+            },
+            {
+              "kind": "field",
+              "key": "project.retention_days",
+              "label": "원자료 보관 기간",
+              "value": "90일"
+            },
+            {
+              "kind": "field",
+              "key": "project.delete_raw_after_analysis",
+              "label": "분석 후 원본 삭제",
+              "value": "사용 안 함"
+            }
+          ]
+        },
+        {
+          "title": "팀원",
+          "items": [
+            {
+              "kind": "value",
+              "key": "member.name",
+              "label": "이름",
+              "value": "예시 기획 담당자"
+            },
+            {
+              "kind": "field",
+              "key": "member.email",
+              "label": "이메일",
+              "value": "planner@example.test"
+            },
+            {
+              "kind": "badge",
+              "component": "MemberRole",
+              "value": "owner",
+              "key": "member.role"
+            },
+            {
+              "kind": "action",
+              "key": "member.invite",
+              "label": "팀원 초대",
+              "target": null,
+              "style": "secondary"
+            },
+            {
+              "kind": "action",
+              "key": "member.remove",
+              "label": "팀원 제거",
+              "target": null,
+              "style": "secondary"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "kind": "action",
+          "key": "project.save_settings",
+          "label": "설정 저장",
+          "target": null,
+          "style": "primary"
+        },
+        {
+          "kind": "action",
+          "key": "project.archive",
+          "label": "프로젝트 보관",
+          "target": "archive",
+          "style": "secondary"
+        }
+      ],
+      "states": [
+        "default",
+        "empty"
+      ]
+    },
+    {
+      "screen_key": "archive",
+      "title": "보관함",
+      "kicker": "프로젝트 관리",
+      "desc": "중단한 이유와 판단 근거를 보존합니다. 필요하면 프로젝트를 복원할 수 있습니다.",
+      "sections": [
+        {
+          "title": "보관된 프로젝트",
+          "items": [
+            {
+              "kind": "value",
+              "key": "project.name",
+              "label": "프로젝트",
+              "value": "예시 · 영수증 자동 전표화"
+            },
+            {
+              "kind": "badge",
+              "component": "ProjectStatus",
+              "value": "archived",
+              "key": "project.status"
+            },
+            {
+              "kind": "value",
+              "key": "decision.rationale",
+              "label": "보관 근거",
+              "value": "데이터 확보 가설의 미달 증거를 확인해 팀이 중단했습니다."
+            },
+            {
+              "kind": "badge",
+              "component": "EvidenceBadge",
+              "value": "L3",
+              "key": "evidence.evidence_level"
+            },
+            {
+              "kind": "badge",
+              "component": "VerdictBadge",
+              "value": "not_met",
+              "key": "verdict.result"
+            },
+            {
+              "kind": "value",
+              "key": "decision.decided_at",
+              "label": "결정일",
+              "value": "2026.10.24"
+            }
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "kind": "action",
+          "key": "project.restore",
+          "label": "프로젝트 복원",
+          "target": "dashboard",
+          "style": "primary"
+        },
+        {
+          "kind": "action",
+          "key": "nav:projects",
+          "label": "프로젝트 목록",
+          "target": "projects",
+          "style": "secondary"
+        }
+      ],
+      "states": [
+        "default",
+        "empty"
+      ]
+    }
+  ]
+}
