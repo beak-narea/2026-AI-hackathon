@@ -1,0 +1,54 @@
+{
+  "name": "ai-startup-validation",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:db": "vitest run --config vitest.db.config.ts",
+    "db:push": "supabase db push --include-seed",
+    "seed:generate": "tsx scripts/generate-seed.ts > supabase/seed.sql",
+    "smoke": "tsx scripts/smoke.ts",
+    "workbank:import": "tsx scripts/import-workbank.ts",
+    "test:integration": "vitest run --config vitest.integration.config.ts",
+    "dev:demo": "cross-env DEMO_MODE=1 next dev",
+    "start:demo": "cross-env DEMO_MODE=1 next start",
+    "setup": "tsx scripts/setup.ts",
+    "doctor": "tsx scripts/doctor.ts",
+    "eval:sycophancy": "tsx scripts/eval-sycophancy.ts",
+    "predeploy:check": "tsx scripts/predeploy-check.ts"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "0.3.7",
+    "@fontsource-variable/space-grotesk": "^5.2.10",
+    "@fontsource/noto-sans-kr": "^5.3.0",
+    "@react-pdf/renderer": "^4.9.0",
+    "@supabase/ssr": "0.6.1",
+    "@supabase/supabase-js": "2.49.4",
+    "js-yaml": "4.1.0",
+    "next": "^15.5.28",
+    "postgres": "3.4.7",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "server-only": "^0.0.1",
+    "unpdf": "^1.8.1",
+    "zod": "4.1.5"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "4.0.9",
+    "@types/node": "22.15.3",
+    "@types/react": "19.1.2",
+    "@types/react-dom": "19.1.2",
+    "cross-env": "^10.0.0",
+    "tsx": "^4.21.1",
+    "typescript": "5.8.3",
+    "vitest": "3.2.4"
+  }
+}
